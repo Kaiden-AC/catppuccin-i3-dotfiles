@@ -70,10 +70,9 @@ PACMAN_PACKAGES=(
     pamixer           # CLI audio mixer (for keybindings)
     # System & Convenience
     networkmanager    # Network management daemon
-    nm-applet         # System tray applet for NetworkManager
+    network-manager-applet # System tray applet for NetworkManager
     brightnessctl     # Control screen brightness (laptops)
     flameshot         # Screenshot tool
-    betterlockscreen  # Fancy lockscreen
     imagemagick       # Required by betterlockscreen
     unzip             # For extracting archives
     wget              # For downloading files (like wallpaper)
@@ -91,6 +90,7 @@ PACMAN_PACKAGES=(
 AUR_PACKAGES=(
     catppuccin-gtk-theme-mocha # GTK theme (check exact name on AUR if needed)
     papirus-folders-catppuccin # Papirus folder icons with Catppuccin colors
+	betterlockscreen           # Fancy lockscreen
     # yay               # AUR Helper - we install this manually first
 )
 
