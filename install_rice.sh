@@ -89,7 +89,7 @@ PACMAN_PACKAGES=(
 
 AUR_PACKAGES=(
     catppuccin-gtk-theme-mocha # GTK theme (check exact name on AUR if needed)
-    papirus-folders-catppuccin # Papirus folder icons with Catppuccin colors
+    papirus-folders-catppuccin-git # Papirus folder icons with Catppuccin colors
 	betterlockscreen           # Fancy lockscreen
     # yay               # AUR Helper - we install this manually first
 )
