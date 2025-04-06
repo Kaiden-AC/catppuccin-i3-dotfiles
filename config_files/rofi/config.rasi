@@ -1,0 +1,155 @@
+/* ~/.config/rofi/config.rasi */
+
+configuration {
+    modi:                    "drun,run,window,ssh"; /* Add modes as needed */
+    show-icons:              true;
+    icon-theme:              "Papirus-Dark"; /* Match your system icon theme */
+    terminal:                "alacritty";
+    drun-display-format:     "{name}";
+    location:                0; /* Center */
+    yoffset:                 0;
+    xoffset:                 0;
+    fixed-num-lines:         true;
+    font:                    "JetBrainsMono Nerd Font 12";
+    bw:                      1; /* Border width */
+    disable-history:         false;
+    hide-scrollbar:          true;
+    sidebar-mode:            false;
+
+    /* Load a theme (referenced in i3 config and powermenu module) */
+    /* theme:                 "~/.config/rofi/launchers/style.rasi"; */
+}
+
+/* You can embed theme settings here, but using separate files is cleaner */
+/* For example, basic Catppuccin Mocha colors */
+/* @theme "/dev/null"  <- Use this if defining colors directly below */
+
+/* * { */
+/*     background-color:      transparent; */
+/*     text-color:            #cdd6f4; */ /* Text */
+
+/*     ctp-rosewater:         #f5e0dc; */
+/*     ctp-flamingo:          #f2cdcd; */
+/*     ctp-pink:              #f5c2e7; */
+/*     ctp-mauve:             #cba6f7; */
+/*     ctp-red:               #f38ba8; */
+/*     ctp-maroon:            #eba0ac; */
+/*     ctp-peach:             #fab387; */
+/*     ctp-yellow:            #f9e2af; */
+/*     ctp-green:             #a6e3a1; */
+/*     ctp-teal:              #94e2d5; */
+/*     ctp-sky:               #89dceb; */
+/*     ctp-sapphire:          #74c7ec; */
+/*     ctp-blue:              #89b4fa; */
+/*     ctp-lavender:          #b4befe; */
+/*     ctp-text:              #cdd6f4; */
+/*     ctp-subtext1:          #bac2de; */
+/*     ctp-subtext0:          #a6adc8; */
+/*     ctp-overlay2:          #9399b2; */
+/*     ctp-overlay1:          #7f849c; */
+/*     ctp-overlay0:          #6c7086; */
+/*     ctp-surface2:          #585b70; */
+/*     ctp-surface1:          #45475a; */
+/*     ctp-surface0:          #313244; */
+/*     ctp-base:              #1e1e2e; */
+/*     ctp-mantle:            #181825; */
+/*     ctp-crust:             #11111b; */
+
+/*     main-bg:               @ctp-base; */
+/*     main-fg:               @ctp-text; */
+/*     alt-bg:                @ctp-mantle; */
+/*     alt-fg:                @ctp-subtext0; */
+/*     sel-bg:                @ctp-surface1; */
+/*     sel-fg:                @ctp-mauve; */
+/*     urg-bg:                @ctp-red; */
+/*     urg-fg:                @ctp-base; */
+/*     act-bg:                @ctp-surface0; */
+/*     act-fg:                @ctp-blue; */
+/* } */
+
+/* window { */
+/*     background-color:      @main-bg; */
+/*     border:                2px; */
+/*     border-color:          @ctp-mauve; */
+/*     border-radius:         8px; */
+/*     padding:               15; */
+/*     width:                 40%; */
+/* } */
+
+/* mainbox { */
+/*     children:              [ inputbar, listview ]; */
+/*     spacing:               10px; */
+/*     padding:               10px; */
+/* } */
+
+/* inputbar { */
+/*     children:              [ prompt, entry ]; */
+/*     background-color:      @alt-bg; */
+/*     border-radius:         4px; */
+/*     padding:               5px 10px; */
+/* } */
+
+/* prompt { */
+/*     text-color:            @ctp-lavender; */
+/*     enabled:               true; */
+/*     padding:               2px 5px 0 0; */
+/* } */
+
+/* entry { */
+/*     placeholder:           "Type to search..."; */
+/*     placeholder-color:     @ctp-surface2; */
+/*     text-color:            inherit; */
+/* } */
+
+/* listview { */
+/*     columns:               1; */
+/*     lines:                 8; */
+/*     cycle:                 true; */
+/*     dynamic:               true; */
+/*     layout:                vertical; */
+/* } */
+
+/* element { */
+/*     padding:               8px 12px; */
+/*     border-radius:         4px; */
+/*     spacing:               10px; */
+/* } */
+
+/* element-icon { */
+/*     size:                  1.5em; */
+/*     vertical-align:        0.5; */
+/* } */
+
+/* element-text { */
+/*     vertical-align:        0.5; */
+/* } */
+
+/* element normal.normal { */
+/*     background-color:      inherit; */
+/*     text-color:            inherit; */
+/* } */
+
+/* element selected.normal { */
+/*     background-color:      @sel-bg; */
+/*     text-color:            @sel-fg; */
+/* } */
+
+/* element alternate.normal { */
+/*     background-color:      @alt-bg; */
+/*     text-color:            inherit; */
+/* } */
+
+/* element urgent.normal { */
+/*     background-color:      @urg-bg; */
+/*     text-color:            @urg-fg; */
+/* } */
+
+/* element active.normal { */
+/*     background-color:      @act-bg; */
+/*     text-color:            @act-fg; */
+/* } */
+
+/* element selected.active { */
+/*     background-color:      @sel-bg; */
+/*     text-color:            @act-fg; */
+/* } */

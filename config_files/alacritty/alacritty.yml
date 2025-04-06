@@ -1,0 +1,100 @@
+# ~/.config/alacritty/alacritty.yml
+# Alacritty configuration for Catppuccin Mocha
+
+env:
+  TERM: alacritty # or xterm-256color
+
+window:
+  padding:
+    x: 10
+    y: 10
+  decorations: full # Set to "none" for i3 titlebars only
+  startup_mode: Windowed # Maximized, Fullscreen
+  # opacity: 0.9 # Set transparency here OR use Picom (recommended)
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic
+  size: 11.0
+
+# Catppuccin Mocha color scheme
+colors:
+  primary:
+    background: '#1E1E2E' # base
+    foreground: '#CDD6F4' # text
+  cursor:
+    text: '#1E1E2E' # base
+    cursor: '#F5E0DC' # rosewater
+  vi_mode_cursor:
+    text: '#1E1E2E' # base
+    cursor: '#B4BEFE' # lavender
+  selection:
+    text: '#1E1E2E' # base
+    background: '#F5E0DC' # rosewater
+  search:
+    matches:
+      foreground: '#1E1E2E' # base
+      background: '#A6ADC8' # subtext0
+    focused_match:
+      foreground: '#1E1E2E' # base
+      background: '#A6E3A1' # green
+  hints:
+      start:
+        foreground: '#1E1E2E' # base
+        background: '#F9E2AF' # yellow
+      end:
+        foreground: '#1E1E2E' # base
+        background: '#A6ADC8' # subtext0
+  line_indicator:
+    foreground: None
+    background: None
+  footer_bar:
+    background: '#1E1E2E' # base
+    foreground: '#CDD6F4' # text
+  normal:
+    black:   '#45475A' # surface1
+    red:     '#F38BA8' # red
+    green:   '#A6E3A1' # green
+    yellow:  '#F9E2AF' # yellow
+    blue:    '#89B4FA' # blue
+    magenta: '#F5C2E7' # pink
+    cyan:    '#94E2D5' # teal
+    white:   '#BAC2DE' # subtext1
+  bright:
+    black:   '#585B70' # surface2
+    red:     '#F38BA8' # red
+    green:   '#A6E3A1' # green
+    yellow:  '#F9E2AF' # yellow
+    blue:    '#89B4FA' # blue
+    magenta: '#F5C2E7' # pink
+    cyan:    '#94E2D5' # teal
+    white:   '#A6ADC8' # subtext0
+
+# Bell configuration (optional)
+# bell:
+#   animation: EaseOutExpo
+#   duration: 100
+#   color: '#F9E2AF'
+
+# Key bindings (optional, defaults are usually fine)
+# key_bindings:
+#   - { key: V, mods: Control|Shift, action: Paste }
+#   - { key: C, mods: Control|Shift, action: Copy }
+#   - { key: PageUp,   mode: ~Alt, action: ScrollPageUp   }
+#   - { key: PageDown, mode: ~Alt, action: ScrollPageDown }
+#   - { key: Home,     mode: ~Alt, action: ScrollToTop    }
+#   - { key: End,      mode: ~Alt, action: ScrollToBottom }

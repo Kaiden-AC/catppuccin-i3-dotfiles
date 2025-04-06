@@ -1,0 +1,160 @@
+/* ~/.config/rofi/launchers/style.rasi */
+/* Catppuccin Mocha Rofi Theme */
+
+* {
+    background-color:      transparent;
+    text-color:            #cdd6f4; /* Text */
+
+    ctp-rosewater:         #f5e0dc;
+    ctp-flamingo:          #f2cdcd;
+    ctp-pink:              #f5c2e7;
+    ctp-mauve:             #cba6f7;
+    ctp-red:               #f38ba8;
+    ctp-maroon:            #eba0ac;
+    ctp-peach:             #fab387;
+    ctp-yellow:            #f9e2af;
+    ctp-green:             #a6e3a1;
+    ctp-teal:              #94e2d5;
+    ctp-sky:               #89dceb;
+    ctp-sapphire:          #74c7ec;
+    ctp-blue:              #89b4fa;
+    ctp-lavender:          #b4befe;
+    ctp-text:              #cdd6f4;
+    ctp-subtext1:          #bac2de;
+    ctp-subtext0:          #a6adc8;
+    ctp-overlay2:          #9399b2;
+    ctp-overlay1:          #7f849c;
+    ctp-overlay0:          #6c7086;
+    ctp-surface2:          #585b70;
+    ctp-surface1:          #45475a;
+    ctp-surface0:          #313244;
+    ctp-base:              #1e1e2e;
+    ctp-mantle:            #181825;
+    ctp-crust:             #11111b;
+
+    main-bg:               @ctp-base;
+    main-fg:               @ctp-text;
+    alt-bg:                @ctp-mantle;
+    alt-fg:                @ctp-subtext0;
+    sel-bg:                @ctp-surface1;
+    sel-fg:                @ctp-mauve;
+    urg-bg:                @ctp-red;
+    urg-fg:                @ctp-base;
+    act-bg:                @ctp-surface0;
+    act-fg:                @ctp-blue;
+
+    border-col:            @ctp-mauve;
+    prompt-col:            @ctp-lavender;
+    placeholder-col:       @ctp-surface2;
+
+    width:                 500;
+    lines:                 10;
+    border-radius:         12px;
+    border:                2px;
+    padding:               16px;
+}
+
+window {
+    background-color:      @main-bg;
+    border-color:          @border-col;
+    border:                @border;
+    border-radius:         @border-radius;
+    padding:               @padding;
+    width:                 @width;
+}
+
+mainbox {
+    children:              [ inputbar, listview ];
+    spacing:               15px;
+    padding:               10px;
+}
+
+inputbar {
+    children:              [ prompt, entry ];
+    background-color:      @alt-bg;
+    border-radius:         8px;
+    padding:               10px 15px;
+    spacing:               10px;
+    text-color:            @main-fg;
+}
+
+prompt {
+    text-color:            @prompt-col;
+    enabled:               true;
+    padding:               2px 0px;
+    vertical-align:        0.5;
+}
+
+entry {
+    placeholder:           "Search...";
+    placeholder-color:     @placeholder-col;
+    text-color:            inherit;
+    vertical-align:        0.5;
+    padding:               2px 0px;
+}
+
+listview {
+    columns:               1;
+    lines:                 @lines;
+    cycle:                 true;
+    dynamic:               true;
+    layout:                vertical;
+    spacing:               8px;
+}
+
+element {
+    padding:               10px 15px;
+    border-radius:         8px;
+    spacing:               15px;
+    vertical-align:        0.5;
+}
+
+element-icon {
+    size:                  1.8em;
+    vertical-align:        0.5;
+    horizontal-align:      0.5;
+}
+
+element-text {
+    vertical-align:        0.5;
+    horizontal-align:      0.0;
+    text-color:            inherit;
+}
+
+element normal.normal {
+    background-color:      @main-bg;
+    text-color:            @main-fg;
+}
+
+element selected.normal {
+    background-color:      @sel-bg;
+    text-color:            @sel-fg;
+}
+
+element alternate.normal {
+    background-color:      @alt-bg;
+    text-color:            @main-fg;
+}
+
+element urgent.normal {
+    background-color:      @urg-bg;
+    text-color:            @urg-fg;
+    border-radius:         8px; /* Consistent radius */
+}
+
+element active.normal {
+    background-color:      @act-bg;
+    text-color:            @act-fg;
+}
+
+element selected.active {
+    background-color:      @sel-bg;
+    text-color:            @act-fg;
+}
+
+scrollbar {
+    handle-width:          4px ;
+    handle-color:          @sel-bg;
+    border-radius:         4px;
+    background-color:      @alt-bg;
+}

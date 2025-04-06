@@ -1,0 +1,74 @@
+# ~/.config/dunst/dunstrc
+# Dunst configuration for Catppuccin Mocha
+
+[global]
+    # Display settings
+    monitor = 0
+    follow = mouse # mouse/keyboard
+    geometry = "300x5-30+50" # width x height - x + y
+    indicate_hidden = yes
+    shrink = no
+    transparency = 10
+    notification_limit = 20
+    # separator_height = 2
+    padding = 8
+    horizontal_padding = 8
+    frame_width = 2
+    frame_color = "#89b4fa" # Blue - Adjust as desired
+
+    # Sorting and timeouts
+    sort = yes
+    idle_threshold = 120
+    font = JetBrainsMono Nerd Font 10
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b" # Subject, Body
+    alignment = left # left/center/right
+    vertical_alignment = center # top/center/bottom
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle # start/middle/end
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes # (S)ticky, (A)ction, (M)uted
+
+    # Icons
+    icon_position = left # left/right/off
+    max_icon_size = 32
+    icon_path = /usr/share/icons/Papirus-Dark/16x16/:/usr/share/icons/Papirus-Dark/32x32/:/usr/share/icons/Papirus-Dark/64x64/
+
+    # History and persistence
+    sticky_history = yes
+    history_length = 20
+
+    # Misc
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/firefox # Change if needed
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+
+    # Mouse actions
+    # mouse_left_click = close_current
+    # mouse_middle_click = do_action, close_current
+    # mouse_right_click = close_all
+
+# Catppuccin Mocha Colorscheme for Dunst
+[urgency_low]
+    background = "#1e1e2e" # Base
+    foreground = "#cdd6f4" # Text
+    timeout = 5
+    frame_color = "#a6e3a1" # Green
+
+[urgency_normal]
+    background = "#1e1e2e" # Base
+    foreground = "#cdd6f4" # Text
+    timeout = 10
+    frame_color = "#89b4fa" # Blue
+
+[urgency_critical]
+    background = "#1e1e2e" # Base
+    foreground = "#f38ba8" # Red
+    frame_color = "#f38ba8" # Red
+    timeout = 0 # Sticky

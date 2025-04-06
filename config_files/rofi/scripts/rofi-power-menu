@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Simple Rofi powermenu script using Nerd Fonts icons
+
+# Options with associated icons (adjust icons as needed)
+options="󰐥 Shutdown\n󰜉 Reboot\n󰗽 Lock\n󰗼 Logout\n󰒲 Suspend\n󰤄 Hibernate"
+
+# Get user choice
+chosen=$(echo -e "$options" | rofi -dmenu -i -p "Power Menu" -theme ~/.config/rofi/powermenu/style.rasi)
+
+# Execute action based on choice
+case "$chosen" in
+    "󰐥 Shutdown")
+        systemctl poweroff
+        ;;
+    "󰜉 Reboot")
+        systemctl reboot
+        ;;
+    "󰗽 Lock")
+        # Use the lockscreen defined in i3 config or specify here
+        betterlockscreen -l dimblur
+        ;;
+    "󰗼 Logout")
+        # Logout command depends on how you start i3
+        # For startx/xinit:
+        i3-msg exit
+        # If using a display manager, find its specific logout command
+        # e.g., for LightDM: dm-tool switch-to-greeter
+        # e.g., for SDDM: loginctl terminate-user $USER
+        ;;
+    "󰒲 Suspend")
+        # Check if betterlockscreen exists before locking
+        command -v betterlockscreen &> /dev/null && betterlockscreen -l dimblur
+        systemctl suspend
+        ;;
+    "󰤄 Hibernate")
+        # Check if betterlockscreen exists before locking
+        command -v betterlockscreen &> /dev/null && betterlockscreen -l dimblur
+        systemctl hibernate
+        ;;
+    *)
+        # Do nothing if selection is empty or invalid
+        ;;
+esac

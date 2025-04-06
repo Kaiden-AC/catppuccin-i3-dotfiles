@@ -1,0 +1,111 @@
+/* ~/.config/rofi/powermenu/style.rasi */
+/* Catppuccin Mocha Powermenu Theme */
+
+* {
+    background-color:      transparent;
+    text-color:            #cdd6f4; /* Text */
+
+    ctp-base:              #1e1e2e;
+    ctp-mantle:            #181825;
+    ctp-crust:             #11111b;
+    ctp-text:              #cdd6f4;
+    ctp-surface0:          #313244;
+    ctp-surface1:          #45475a;
+    ctp-red:               #f38ba8;
+    ctp-peach:             #fab387;
+    ctp-yellow:            #f9e2af;
+    ctp-blue:              #89b4fa;
+    ctp-sky:               #89dceb;
+    ctp-mauve:             #cba6f7;
+
+    main-bg:               @ctp-mantle; /* Slightly darker bg */
+    main-fg:               @ctp-text;
+    alt-bg:                @ctp-surface0; /* Button background */
+    sel-bg:                @ctp-surface1; /* Selected button */
+    border-col:            @ctp-mauve;
+
+    font:                  "JetBrainsMono Nerd Font 14";
+    border-radius:         12px;
+    width:                 300;
+    lines:                 6; /* Number of options */
+}
+
+window {
+    background-color:      @main-bg;
+    border:                2px;
+    border-color:          @border-col;
+    border-radius:         @border-radius;
+    width:                 @width;
+    padding:               30px;
+    location:              center;
+    anchor:                center;
+}
+
+mainbox {
+    children:              [ listview ];
+    spacing:               15px;
+}
+
+listview {
+    lines:                 @lines;
+    columns:               1;
+    layout:                vertical;
+    cycle:                 false;
+    spacing:               10px;
+}
+
+element {
+    background-color:      @alt-bg;
+    text-color:            @main-fg;
+    border-radius:         8px;
+    padding:               15px;
+    orientation:           horizontal;
+    spacing:               20px;
+}
+
+element-icon {
+    size:                  1.5em;
+    vertical-align:        0.5;
+    horizontal-align:      0.5;
+}
+
+element-text {
+    vertical-align:        0.5;
+    horizontal-align:      0.0;
+    text-color:            inherit;
+}
+
+element selected {
+    background-color:      @sel-bg;
+    text-color:            @ctp-mauve;
+}
+
+/* Style specific icons (using Nerd Font glyphs) */
+element normal normal {
+    background-color: @alt-bg;
+}
+
+element selected normal {
+    background-color: @sel-bg;
+}
+
+element normal active {
+    background-color: @alt-bg;
+}
+
+element selected active {
+    background-color: @sel-bg;
+}
+
+element normal urgent {
+    background-color: @alt-bg;
+}
+
+element selected urgent {
+    background-color: @sel-bg;
+}
+
+/* Align text to center */
+element-text {
+    horizontal-align: 0.5;
+}
